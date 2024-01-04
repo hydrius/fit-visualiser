@@ -13,13 +13,13 @@ warnings.filterwarnings('ignore')
 
 
 
-env =   {"server": st.secrets("SERVER"),
-            "token": st.secrets("TOKEN"),
-            "chat_id": st.secrets("CHAT_ID"),
-            "password": st.secrets("PASS"),
-            "user": st.secrets("USER"),
-            "database": st.secrets("DB")
-            }
+env =   {"server": st.secrets["SERVER"],
+            "token": st.secrets["TOKEN"],
+            "chat_id": st.secrets["CHAT_ID"],
+            "password": st.secrets["PASS"],
+            "user": st.secrets["USER"],
+            "database": st.secrets["DB"]
+         }
 
 
 
