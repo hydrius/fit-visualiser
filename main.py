@@ -176,5 +176,5 @@ class DataVisualiser():
         st.scatter_chart(data[['High Intensity','Low Intensity', 'Rest']])
 
 
-dv = DataVisualiser()
+dv = DataVisualiser(env)
 dv.charting()
