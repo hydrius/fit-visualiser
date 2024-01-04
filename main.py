@@ -7,25 +7,28 @@ import psycopg2
 from sqlalchemy import create_engine
 
 import os
-from dotenv import load_dotenv 
-load_dotenv()
 
 import warnings
 warnings.filterwarnings('ignore')
+
+
+
+env =   {"server": st.secrets("SERVER"),
+            "token": st.secrets("TOKEN"),
+            "chat_id": st.secrets("CHAT_ID"),
+            "password": st.secrets("PASS"),
+            "user": st.secrets("USER"),
+            "database": st.secrets("DB")
+            }
+
 
 
 #https://docs.streamlit.io/library/api-reference/charts/st.scatter_chart#
 
 
 class DataVisualiser():
-    def __init__(self):
-        self.env =   {"server": os.getenv("SERVER"),
-            "token": os.getenv("TOKEN"),
-            "chat_id": os.getenv("CHAT_ID"),
-            "password": os.getenv("PASS"),
-            "user": os.getenv("USER"),
-            "database": os.getenv("DB")
-            }
+    def __init__(self, env):
+        self.env = env
 
 
     def get_data(self):
